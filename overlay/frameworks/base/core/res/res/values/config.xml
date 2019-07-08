@@ -1143,4 +1143,10 @@
     <bool name="config_proximityCheckOnWake">true</bool>
     <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+    
+    <!-- Does the device support handwave for doze pulse?
+         Handwave sensor type must be set and must be a proximity
+         type sensor -->
+    <bool name="config_dozePulseHandWave">true</bool>
+    <string name="config_dozeHandWaveSensorType" translatable="false">android.sensor.proximity</string>    
 </resources>
