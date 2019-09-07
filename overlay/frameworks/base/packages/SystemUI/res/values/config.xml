@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2015, The Android Open Source Project
+** Copyright 2009, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -29,5 +29,8 @@
     
     <!-- Allow devices override audio panel location to the left side -->
     <bool name="config_audioPanelOnLeftSide">true</bool>
-</resources>
 
+    <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
+    <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>    
+
+</resources>
