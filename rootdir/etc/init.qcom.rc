@@ -320,6 +320,10 @@ on boot
 #Rongchun.zhang@PSW.MM.Display, 2017/07/03, Add for Rom Update.[From: Deliang.Peng@PSW.MM.Performance.Display]
     chmod 0644 /data/oppo/multimedia/oppo_display_perf_list.xml
 #endif /* VENDOR_EDIT */
+
+    # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
