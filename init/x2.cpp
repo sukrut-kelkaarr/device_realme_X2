@@ -144,4 +144,9 @@ void vendor_load_properties()
     {
         setRMX(0); //RMX1991
     }
+    
+    property_override("org.evolution.build_donate_url", "https://www.paypal.me/sg4778");
+    property_override("org.evolution.build_maintainer", "Sukrut4778");
+    property_override("org.evolution.build_support_url", "https://t.me/EvolutionXX2");
+
 }
