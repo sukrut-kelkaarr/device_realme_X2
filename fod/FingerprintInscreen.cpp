@@ -98,16 +98,15 @@ Return<void> FingerprintInscreen::onPress() {
 
 Return<void> FingerprintInscreen::onRelease() {
     mFingerPressed = false;
-    set(DIMLAYER_PATH, FP_BEGIN);
     set(FP_PRESS_PATH, FP_ENDIT);
-
+    set(DIMLAYER_PATH, FP_ENDIT);
     return Void();
 }
 
 Return<void> FingerprintInscreen::onShowFODView() {
     this->mFodCircleVisible = true;
-    set(DIMLAYER_PATH, FP_BEGIN);
     set(FP_PRESS_PATH, FP_ENDIT);
+    set(DIMLAYER_PATH, FP_ENDIT);
 
     return Void();
 }
