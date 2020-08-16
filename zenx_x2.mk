@@ -11,10 +11,10 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/zenx/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_x2
+PRODUCT_NAME := zenx_x2
 PRODUCT_DEVICE := x2
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 4 XL
