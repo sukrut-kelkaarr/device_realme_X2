@@ -336,7 +336,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.affinity.sh \
     init.class_late.sh \
     init.class_main.sh \
     init.crda.sh \
