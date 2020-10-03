@@ -22,8 +22,8 @@ PRODUCT_MODEL := Pixel 4 XL
 PRODUCT_MANUFACTURER := Google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="coral-user 10 QQ3A.200705.002 6506677 release-keys"
+    PRIVATE_BUILD_DESC="coral-user 10 RP1A.200720.009 6720564 release-keys"
 
-BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:11/RP1A.200720.009/6720564:user/release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
