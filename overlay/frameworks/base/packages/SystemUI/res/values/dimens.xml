@@ -23,4 +23,6 @@
     <dimen name="rounded_corner_content_padding">10dp</dimen>
 
     <dimen name="keyguard_carrier_text_margin">18dp</dimen>
+
+    <dimen name="keyguard_indication_margin_bottom">15dp</dimen>
 </resources>
