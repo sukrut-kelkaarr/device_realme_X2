@@ -12,7 +12,7 @@ persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.profile_update=true
 
 # Display
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 
 # DPM
 persist.vendor.dpm.feature=1
