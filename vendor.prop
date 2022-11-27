@@ -42,7 +42,7 @@ vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.voice.path.for.pcm.voip=true
-vendor.audio.feature.a2dp_offload.enable=true
+vendor.audio.feature.a2dp_offload.enable=false
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.anc_headset.enable=true
 vendor.audio.feature.audiozoom.enable=false
@@ -112,15 +112,14 @@ bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=false
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
-persist.vendor.bt.aac_frm_ctl.enabled=true
-persist.bluetooth.a2dp_offload.disabled=false
+persist.bluetooth.a2dp_offload.disabled=true
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
-persist.vendor.qcom.bluetooth.enable.splita2dp=true
+persist.vendor.qcom.bluetooth.enable.splita2dp=false
 persist.vendor.qcom.bluetooth.scram.enabled=true
 persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.service.bdroid.soc.alwayson=true
-ro.bluetooth.a2dp_offload.supported=true
+ro.bluetooth.a2dp_offload.supported=false
 ro.vendor.bluetooth.wipower=false
 
 # Camera
