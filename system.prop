@@ -1,7 +1,3 @@
-# Bluetooth
-vendor.bluetooth.soc=cherokee
-ro.bluetooth.library_name=libbluetooth.so 
-
 # Camera
 vendor.camera.aux.packagelist=com.android.camera
 

@@ -57,7 +57,6 @@ system_ext/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
 system_ext/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
 system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8150.so
 system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8250.so
-vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
@@ -91,7 +90,6 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio
-vendor/lib/liba2dpoffload.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
@@ -112,7 +110,6 @@ vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
-vendor/lib64/liba2dpoffload.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libaudio_log_utils.so
@@ -196,14 +193,6 @@ odm/lib/vendor.oplus.hardware.bluetooth_audio@1.0.so
 odm/lib64/hw/vendor.oplus.hardware.bluetooth_audio@1.0-impl.so
 odm/lib64/oplus_btaudio_offload_if.so
 odm/lib64/vendor.oplus.hardware.bluetooth_audio@1.0.so
-vendor/lib/hw/audio.bluetooth_qti.default.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/btaudio_offload_if.so
-vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib64/hw/audio.bluetooth_qti.default.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib64/btaudio_offload_if.so
-vendor/lib64/libbluetooth_audio_session_qti.so
 
 # Camera
 vendor/lib64/libbase64.so
