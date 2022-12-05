@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_X2.mk
+    $(LOCAL_DIR)/evolution_X2.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_X2-userdebug \
-    lineage_X2-eng
+    evolution_X2-userdebug \
+    evolution_X2-eng
