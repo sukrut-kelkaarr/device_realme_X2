@@ -1,3 +1,6 @@
 r_dir_file(vendor_wcnss_service, mnt_vendor_file)
 
+get_prop(vendor_wcnss_service, vendor_default_prop);
+
+set_prop(vendor_wcnss_service, vendor_default_prop);
 set_prop(vendor_wcnss_service, oppo_wlan_prop);

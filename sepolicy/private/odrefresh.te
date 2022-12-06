@@ -1,0 +1,2 @@
+allow odrefresh self:capability { kill };
+allow odrefresh property_type:file *;

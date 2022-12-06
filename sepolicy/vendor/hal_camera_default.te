@@ -4,6 +4,8 @@ allow hal_camera_default vendor_persist_camera_file:file create_file_perms;
 allow hal_camera_default vendor_persist_camera_file:dir rw_dir_perms;
 allow hal_camera_default proc_flash:file rw_file_perms;
 
+allow hal_camera_default property_type:file *;
+
 get_prop(hal_camera_default, vendor_camera_prop)
 get_prop(hal_camera_default, oppo_debug_prop)
 
@@ -12,3 +14,4 @@ r_dir_file(hal_camera_default, sysfs_net)
 r_dir_file(hal_camera_default, mnt_vendor_file)
 
 set_prop(hal_camera_default, vendor_camera_prop)
+set_prop(hal_camera_default, vendor_default_prop)

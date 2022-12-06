@@ -1,0 +1,3 @@
+allow flags_health_check property_type:file *;
+
+set_prop(flags_health_check, smart_idle_maint_enabled_prop);

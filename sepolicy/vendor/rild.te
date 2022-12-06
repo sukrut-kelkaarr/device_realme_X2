@@ -1,8 +1,23 @@
+allow rild cache_file:dir { getattr write add_name search };
+allow rild cache_file:file create_file_perms;
+
+allow rild mnt_vendor_file:file write;
+
+allow rild unlabeled:dir { search };
+
+allow rild vendor_data_file:dir { getattr write add_name };
+allow rild vendor_data_file:file create_file_perms;
+
 get_prop(rild, oppo_debug_prop);
+
+get_prop(rild, default_prop);
+get_prop(rild, system_prop);
 
 r_dir_file(rild, proc_devinfo);
 r_dir_file(rild, proc_oppo_rf);
 r_dir_file(rild, mnt_vendor_file);
 
+set_prop(rild, default_prop);
+set_prop(rild, system_prop);
 set_prop(rild, oppo_debug_prop);
 

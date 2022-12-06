@@ -1,0 +1,13 @@
+allow system_suspend {
+    sysfs
+    sysfs_rtc
+}:dir r_file_perms;
+
+allow system_suspend {
+    sysfs
+    sysfs_rtc
+}:file r_file_perms;
+
+allow system_suspend sysfs:dir { open read };
+allow system_suspend sysfs:file { open getattr read };
+allow system_suspend sysfs_rtc:dir { open read };
