@@ -1,4 +1,13 @@
+allow rild cache_file:dir { getattr write add_name };
+allow rild cache_file:file rw_file_perms;
+
+allow rild vendor_data_file:dir { getattr write add_name };
+allow rild vendor_data_file:file rw_file_perms;
+
 get_prop(rild, oppo_debug_prop);
+
+get_prop(rild, default_prop);
+get_prop(rild, system_prop);
 
 r_dir_file(rild, proc_devinfo);
 r_dir_file(rild, proc_oppo_rf);
