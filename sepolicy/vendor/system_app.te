@@ -7,5 +7,12 @@ r_dir_file(system_app, proc_touchpanel);
 r_dir_file(system_app, vendor_sysfs_usb_supply);
 allow system_app vendor_sysfs_usb_supply:file rw_file_perms;
 
-allow system_app sysfs_oppo_display:file write;
+r_dir_file(system_app, vendor_sysfs_battery_supply);
+allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
+
+allow system_app sysfs_oppo_display:file rw_file_perms;
 allow system_app sysfs_oppo_display:dir search;
+
+allow system_app vendor_sysfs_graphics:file read;
+
+set_prop(system_app, default_prop)
