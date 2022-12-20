@@ -196,7 +196,6 @@ odm/lib64/vendor.oplus.hardware.bluetooth_audio@1.0.so
 
 # Camera
 vendor/lib64/libbase64.so
-vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libcvface_api.so
 vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/libhbtpclient.so
