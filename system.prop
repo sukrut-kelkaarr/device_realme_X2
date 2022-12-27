@@ -1,5 +1,5 @@
-# Camera
-vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
+# Bluetooth
+vendor.bluetooth.soc=cherokee
 
 # Charger
 ro.charger.enable_suspend=true
