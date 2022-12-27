@@ -1,5 +1,5 @@
 # Camera
-vendor.camera.aux.packagelist=com.android.camera
+vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam
 
 # Charger
 ro.charger.enable_suspend=true
