@@ -673,4 +673,8 @@
 
     <!-- Whether device has vooc charging support -->
     <bool name="config_hasVoocCharger">true</bool>
+
+     <!-- Whether the new Auto Selection Network UI should be shown -->
+     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
+
 </resources>
