@@ -78,6 +78,7 @@ void vendor_load_properties() {
         case 8: // 1991
             device = "RMX1991CN";
             model = "RMX1991";
+            property_override("ro.boot.product.hardware.sku", "has_nfc");
             break;
         case 31: // 1992ex
             device = "RMX1992L1";
@@ -90,6 +91,7 @@ void vendor_load_properties() {
         case 11: // 1993
             device = "RMX1993L1";
             model = "RMX1993";
+            property_override("ro.boot.product.hardware.sku", "has_nfc");
             break;
     }
 

@@ -273,7 +273,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/nfc/nfc_feature.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/nfc_feature.xml
+    $(LOCAL_PATH)/rootdir/etc/init.x2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.x2.rc
+
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/nfc_feature.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_has_nfc/nfc_feature.xml
 
 # Parts
 PRODUCT_PACKAGES += \

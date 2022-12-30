@@ -17,8 +17,6 @@
 	<feature name="android.hardware.nfc.ese" />
 	<feature name="android.hardware.se.omapi.uicc" />
 	<feature name="android.hardware.se.omapi.ese" />
-    <library name="com.nxp.nfc"
-        file="/system/framework/com.nxp.nfc.jar" />
     <library name="com.android.nfc_extras"
         file="/system/framework/com.android.nfc_extras.jar" />
 </permissions>

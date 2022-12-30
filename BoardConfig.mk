@@ -92,6 +92,9 @@ BOARD_HAVE_QCOM_FM := true
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
+ODM_MANIFEST_SKUS += \
+    has_nfc
+ODM_MANIFEST_HAS_NFC_FILES := $(DEVICE_PATH)/manifest_has_nfc.xml
 
 # Media
 TARGET_USES_ION := true
