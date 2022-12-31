@@ -1,19 +1,3 @@
-################################################################
-## Copyright (C), 2020-2022, OPPO Mobile Comm Corp., Ltd.
-## OPLUS_ARCH_EXTENDS
-## File: - init.oppo.display.rc
-## Description:
-##
-## Version: 1.0
-## Date : 2020/10/19
-## Author: sachin.shukla@MULTIMEDIA.DISPLAY
-##
-## ------------------- Revision History: -----------------------
-## <author>            <data>        <version >       <desc>
-## sachin.shukla   2020/10/19         1.0        create file
-################################################################
-#ifdef OPLUS_ARCH_EXTENDS
-#sachin.shukla@MULTIMEDIA.DISPLAY.LCD.PARAMS,2020-10-19 add for display
 on boot
     chown system system /sys/kernel/oppo_display/dump_info
     chown system system /sys/kernel/oppo_display/hbm
@@ -34,9 +18,11 @@ on boot
     chown system system /sys/kernel/oppo_display/write_panel_reg
     chown system system /sys/kernel/oppo_display/serial_number
     chown system system /sys/kernel/oppo_display/panel_serial_number
-    chown system system sys/kernel/oppo_display/mipi_clk_rate_hz
+    chown system system /sys/kernel/oppo_display/mipi_clk_rate_hz
     chown system system /sys/kernel/oppo_display/osc_clock
     chown system system /sys/kernel/oppo_display/max_brightness
+    chown system system /proc/touchpanel/oplus_tp_direction
+    chown system system /proc/touchpanel/oplus_tp_limit_enable
 
     chmod 0666 /sys/kernel/oppo_display/dump_info
     chmod 0666 /sys/kernel/oppo_display/hbm
@@ -53,7 +39,6 @@ on boot
     chmod 0666 /sys/kernel/oppo_display/power_status
     chmod 0666 /sys/kernel/oppo_display/sau_closebl_node
     chmod 0666 /sys/kernel/oppo_display/esd_status
-    chmod 0644 /data/oppo/multimedia/oppo_display_perf_list.xml
     chmod 0666 /sys/kernel/oppo_display/spr
     chmod 0666 /sys/kernel/oppo_display/write_panel_reg
     chmod 0666 /sys/kernel/oppo_display/panel_serial_number
@@ -61,5 +46,9 @@ on boot
     chmod 0666 /sys/kernel/oppo_display/mipi_clk_rate_hz
     chmod 0666 /sys/kernel/oppo_display/osc_clock
     chmod 0666 /sys/kernel/oppo_display/max_brightness
-#endif /* OPLUS_ARCH_EXTENDS */
+    chmod 0666 /proc/touchpanel/oplus_tp_direction
+    chmod 0666 /proc/touchpanel/oplus_tp_limit_enable
 
+    #Preset touchpanel tuner nodes
+    write /proc/touchpanel/oplus_tp_limit_enable 0
+    write /proc/touchpanel/oplus_tp_direction 1
