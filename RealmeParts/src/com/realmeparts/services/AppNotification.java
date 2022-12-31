@@ -43,7 +43,7 @@ public class AppNotification {
                 .setContentText(Notification_Content_Text)
                 .setOngoing(true)
                 .setChannelId(Notification_Channel_Name);
-        Intent intent = new Intent(context, DeviceSettingsActivity.class);
+        Intent intent = new Intent(context, RealmePartsActivity.class);
         final PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         notificationBuilder.setContentIntent(pendingIntent);
 

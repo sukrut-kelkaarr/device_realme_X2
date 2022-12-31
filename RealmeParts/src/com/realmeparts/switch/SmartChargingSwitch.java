@@ -53,14 +53,14 @@ public class SmartChargingSwitch implements OnPreferenceChangeListener {
         Boolean enabled = (Boolean) newValue;
         if (enabled) {
             Utils.startService(mContext, com.realmeparts.SmartChargingService.class);
-            DeviceSettings.mSeekBarPreference.setEnabled(true);
-            DeviceSettings.mResetStats.setEnabled(true);
-            DeviceSettings.mChargingSpeed.setEnabled(true);
+            RealmeParts.mSeekBarPreference.setEnabled(true);
+            RealmeParts.mResetStats.setEnabled(true);
+            RealmeParts.mChargingSpeed.setEnabled(true);
         } else {
             Utils.stopService(mContext, com.realmeparts.SmartChargingService.class);
-            DeviceSettings.mSeekBarPreference.setEnabled(false);
-            DeviceSettings.mResetStats.setEnabled(false);
-            DeviceSettings.mChargingSpeed.setEnabled(false);
+            RealmeParts.mSeekBarPreference.setEnabled(false);
+            RealmeParts.mResetStats.setEnabled(false);
+            RealmeParts.mChargingSpeed.setEnabled(false);
             Utils.writeValue(FILE, "1");
         }
         //Utils.writeValue(getFile(), enabled ? "1" : "0");

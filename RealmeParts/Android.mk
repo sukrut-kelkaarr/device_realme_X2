@@ -32,13 +32,13 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \
-    $(TOP)/packages/resources/devicesettings/res
+    $(TOP)/packages/resources/RealmeParts/res
 
 package_resource_overlays := $(strip \
     $(wildcard $(foreach dir, $(PRODUCT_PACKAGE_OVERLAYS), \
-      $(addprefix $(dir)/, packages/apps/DeviceSettings/res))) \
+      $(addprefix $(dir)/, packages/apps/RealmeParts/res))) \
     $(wildcard $(foreach dir, $(DEVICE_PACKAGE_OVERLAYS), \
-      $(addprefix $(dir)/, packages/apps/DeviceSettings/res))))
+      $(addprefix $(dir)/, packages/apps/RealmeParts/res))))
 
 LOCAL_RESOURCE_DIR := $(package_resource_overlays) $(LOCAL_RESOURCE_DIR)
 LOCAL_PROGUARD_ENABLED := optimization

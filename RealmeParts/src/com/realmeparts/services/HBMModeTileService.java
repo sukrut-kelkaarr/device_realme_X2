@@ -71,7 +71,7 @@ public class HBMModeTileService extends TileService {
         enabled = HBMModeSwitch.isCurrentlyEnabled(this);
         Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "0" : "1");
         HBMModeSwitch.TriggerService(!enabled, this);
-        sharedPrefs.edit().putBoolean(DeviceSettings.KEY_HBM_SWITCH, !enabled).apply();
+        sharedPrefs.edit().putBoolean(RealmeParts.KEY_HBM_SWITCH, !enabled).apply();
         //getQsTile().setLabel(enabled ? "HBM off" : "HBM On");
         getQsTile().setState(enabled ? Tile.STATE_INACTIVE : Tile.STATE_ACTIVE);
         getQsTile().updateTile();

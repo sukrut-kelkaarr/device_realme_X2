@@ -21,9 +21,9 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 
-public class DeviceSettingsActivity extends Activity {
+public class RealmePartsActivity extends Activity {
 
-    private DeviceSettings mDeviceSettingsFragment;
+    private RealmeParts mRealmePartsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +31,12 @@ public class DeviceSettingsActivity extends Activity {
 
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         if (fragment == null) {
-            mDeviceSettingsFragment = new DeviceSettings();
+            mRealmePartsFragment = new RealmeParts();
             getFragmentManager().beginTransaction()
-                    .add(android.R.id.content, mDeviceSettingsFragment)
+                    .add(android.R.id.content, mRealmePartsFragment)
                     .commit();
         } else {
-            mDeviceSettingsFragment = (DeviceSettings) fragment;
+            mRealmePartsFragment = (RealmeParts) fragment;
         }
     }
 }

@@ -16,8 +16,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:sharedUserId="android.uid.system"
     package="com.realmeparts"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="2.0" >
 
     <uses-permission android:name="android.permission.INJECT_EVENTS"
         tools:ignore="ProtectedPermissions" />
@@ -25,11 +25,16 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"
+        tools:ignore="ProtectedPermissions" />
 
     <!-- Required to enable dnd during game mode -->
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+
+    <uses-sdk
+        android:targetSdkVersion="31" />
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -54,7 +59,7 @@
 
         <!-- Device Settings -->
         <activity
-            android:name=".DeviceSettingsActivity"
+            android:name=".RealmePartsActivity"
             android:label="@string/device_title"
             android:exported="true">
             <meta-data
@@ -77,7 +82,7 @@
                 android:resource="@string/device_summary" />
             </activity>
 
-        <activity android:name=".DeviceSettings" />
+        <activity android:name=".RealmeParts" />
 
         <receiver 
                   android:name="com.realmeparts.Startup"
@@ -88,28 +93,6 @@
         </receiver>
 
         <!-- Quick Settings Tiles -->
-        <service
-            android:name="com.realmeparts.DCModeTileService"
-            android:icon="@drawable/ic_dc_tile"
-            android:label="@string/tile_dc_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.realmeparts.SRGBModeTileService"
-            android:icon="@drawable/ic_srgb_tile"
-            android:label="@string/tile_srgb_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
         <service
             android:name="com.realmeparts.HBMModeTileService"
             android:icon="@drawable/ic_hbm"
@@ -132,17 +115,6 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-        <service
-            android:name="com.realmeparts.RefreshRateTileService"
-            android:icon="@drawable/ic_refresh_tile_60"
-            android:label="@string/tile_refresh_rate"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
 
         <service android:name="com.realmeparts.FPSInfoService"
                 android:exported="false">
@@ -151,17 +123,6 @@
             android:name="com.realmeparts.OtgToggleService"
             android:icon="@drawable/ic_otg_tile"
             android:label="@string/tile_otg_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.realmeparts.CABCTileService"
-            android:icon="@drawable/ic_cabc"
-            android:label="@string/cabc_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>

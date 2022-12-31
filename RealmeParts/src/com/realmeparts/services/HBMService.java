@@ -33,10 +33,10 @@ public class HBMService extends Service {
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction() == Intent.ACTION_USER_PRESENT) {
                 Utils.writeValue(HBMModeSwitch.getFile(), "1");
-                Log.d("DeviceSettings", "HBM Enabled");
+                Log.d("RealmeParts", "HBM Enabled");
             } else if (intent.getAction() == Intent.ACTION_SCREEN_OFF) {
                 Utils.writeValue(HBMModeSwitch.getFile(), "0");
-                Log.d("DeviceSettings", "HBM Disabled");
+                Log.d("RealmeParts", "HBM Disabled");
             }
         }
     };

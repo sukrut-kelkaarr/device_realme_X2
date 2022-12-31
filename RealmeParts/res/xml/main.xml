@@ -52,32 +52,11 @@
         android:key="graphics"
         android:title="@string/display_title">
 
-        <com.realmeparts.SecureSettingListPreference
-            android:icon="@drawable/ic_cabc"
-            android:key="cabc"
-            android:dialogTitle="@string/cabc_dialogTitle"
-            android:entries="@array/cabc_profiles"
-            android:entryValues="@array/cabc_values"
-            android:defaultValue="0"
-            android:title="@string/cabc_title" />
-
-        <SwitchPreference
-            android:icon="@drawable/dc_mode_icon"
-            android:key="dc"
-            android:summary="@string/dc_mode_summary"
-            android:title="@string/dc_mode_title" />
-
         <SwitchPreference
             android:key="hbm"
             android:icon="@drawable/ic_hbm"
             android:summary="@string/hbm_mode_summary"
             android:title="@string/hbm_mode_title" />
-
-        <SwitchPreference
-            android:icon="@drawable/srgb_mode_icon"
-            android:key="srgb"
-            android:summary="@string/srgb_mode_summary"
-            android:title="@string/srgb_mode_title" />
 
         <SwitchPreference
             android:icon="@drawable/game_mode_icon"
@@ -99,33 +78,6 @@
                  android:targetPackage="com.realmeparts"
                  android:targetClass="com.realmeparts.doze.DozeSettingsActivity"/>
         </Preference>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="refresh_rate"
-        android:title="@string/refresh_title">
-
-        <com.realmeparts.RadioButtonPreference
-            android:icon="@drawable/refresh_rate_60_icon"
-            android:key="refresh_rate_60"
-            android:checked="false"
-            android:title="@string/refresh_rate_60_title"
-            android:summary="@string/refresh_rate_60_summary" />
-
-        <com.realmeparts.RadioButtonPreference
-            android:icon="@drawable/refresh_rate_90_icon"
-            android:key="refresh_rate_90"
-            android:checked="true"
-            android:enabled="true"
-            android:title="@string/refresh_rate_90_title"
-            android:summary="@string/refresh_rate_90_summary"  />
-
-        <SwitchPreference
-            android:key="refresh_rate_90Forced"
-            android:icon="@drawable/refresh_rate_90forced_icon"
-            android:summary="@string/refresh_rate_90Forced_summary"
-            android:title="@string/refresh_rate_90Forced_title" />
 
     </PreferenceCategory>
 

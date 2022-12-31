@@ -65,7 +65,7 @@ public class OtgToggleService extends TileService {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         enabled = OTGModeSwitch.isCurrentlyEnabled(this);
         Utils.writeValue(OTGModeSwitch.getFile(), enabled ? "0" : "1");
-        sharedPrefs.edit().putBoolean(DeviceSettings.KEY_OTG_SWITCH, !enabled).apply();
+        sharedPrefs.edit().putBoolean(RealmeParts.KEY_OTG_SWITCH, !enabled).apply();
         getQsTile().setState(enabled ? Tile.STATE_INACTIVE : Tile.STATE_ACTIVE);
         getQsTile().updateTile();
     }

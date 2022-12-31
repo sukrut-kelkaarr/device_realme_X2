@@ -55,21 +55,21 @@ public class SmartChargingService extends Service {
             int userSelectedChargingLimit = sharedPreferences.getInt("seek_bar", 95);
             int chargingSpeed = Settings.Secure.getInt(context.getContentResolver(), "charging_speed", 0);
 
-            Log.d("DeviceSettings", "Battery Temperature: " + battTemp + ", Battery Capacity: " + battCap + "%, " + "\n" + "Charging Speed: " + currentmA + " mA, " + "Cool Down: " + coolDown);
+            Log.d("RealmeParts", "Battery Temperature: " + battTemp + ", Battery Capacity: " + battCap + "%, " + "\n" + "Charging Speed: " + currentmA + " mA, " + "Cool Down: " + coolDown);
 
             if (isCoolDownAvailable() && chargingLimit == 1) {
                 // Setting cool down values based on user selected charging speed
                 if (chargingSpeed != 0 && coolDown != chargingSpeed) {
                     Utils.writeValue(cool_down, String.valueOf(chargingSpeed));
-                    Log.d("DeviceSettings", "Battery Temperature: " + battTemp + "\n" + "Battery Capacity: " + battCap + "%" + "\n");
+                    Log.d("RealmeParts", "Battery Temperature: " + battTemp + "\n" + "Battery Capacity: " + battCap + "%" + "\n");
                 } else if (chargingSpeed == 0) {
                     // Setting cool down values based on battery temperature
                     if (battTemp >= 39.5 && coolDown != 2 && coolDown == 0) {
                         Utils.writeValue(cool_down, "2");
-                        Log.d("DeviceSettings", "Battery Temperature: " + battTemp + "\n" + "Battery Capacity: " + battCap + "%" + "\n" + "Applied cool down");
+                        Log.d("RealmeParts", "Battery Temperature: " + battTemp + "\n" + "Battery Capacity: " + battCap + "%" + "\n" + "Applied cool down");
                     } else if (battTemp <= 38.5 && coolDown != 0 && coolDown == 2) {
                         Utils.writeValue(cool_down, "0");
-                        Log.d("DeviceSettings", "Battery Temperature: " + battTemp + "\n" + "Battery Capacity: " + battCap + "%" + "\n" + "No cool down applied");
+                        Log.d("RealmeParts", "Battery Temperature: " + battTemp + "\n" + "Battery Capacity: " + battCap + "%" + "\n" + "No cool down applied");
                     }
                 }
             }
@@ -78,12 +78,12 @@ public class SmartChargingService extends Service {
             if (((userSelectedChargingLimit == battCap) || (userSelectedChargingLimit < battCap)) && chargingLimit != 0) {
                 if (isCoolDownAvailable()) Utils.writeValue(cool_down, "0");
                 Utils.writeValue(mmi_charging_enable, "0");
-                Log.d("DeviceSettings", "Battery Temperature: " + battTemp + ", Battery Capacity: " + battCap + "%, " + "User selected charging limit: " + userSelectedChargingLimit + "%. Stopped charging");
+                Log.d("RealmeParts", "Battery Temperature: " + battTemp + ", Battery Capacity: " + battCap + "%, " + "User selected charging limit: " + userSelectedChargingLimit + "%. Stopped charging");
                 AppNotification.Send(context, Charging_Notification_Channel_ID, context.getString(R.string.smart_charging_title), context.getString(R.string.smart_charging_stoppped_notif));
             } else if (userSelectedChargingLimit > battCap && chargingLimit != 1) {
                 Utils.writeValue(mmi_charging_enable, "1");
                 AppNotification.Send(context, Charging_Notification_Channel_ID, context.getString(R.string.smart_charging_status_notif), "");
-                Log.d("DeviceSettings", "Charging...");
+                Log.d("RealmeParts", "Charging...");
             }
         }
     };
@@ -98,7 +98,7 @@ public class SmartChargingService extends Service {
                     mconnectionInfoReceiver = true;
                     AppNotification.Send(context, Charging_Notification_Channel_ID, context.getString(R.string.smart_charging_status_notif), "");
                 }
-                Log.d("DeviceSettings", "Charger/USB Connected");
+                Log.d("RealmeParts", "Charger/USB Connected");
             } else if (intent.getAction() == Intent.ACTION_POWER_DISCONNECTED) {
                 if (sharedPreferences.getBoolean("reset_stats", false) && sharedPreferences.getInt("seek_bar", 95) == battCap)
                     resetStats();
@@ -107,7 +107,7 @@ public class SmartChargingService extends Service {
                     mconnectionInfoReceiver = false;
                     AppNotification.Cancel(context, Charging_Notification_Channel_ID);
                 }
-                Log.d("DeviceSettings", "Charger/USB Disconnected");
+                Log.d("RealmeParts", "Charger/USB Disconnected");
             }
         }
     };
@@ -121,7 +121,7 @@ public class SmartChargingService extends Service {
             Runtime.getRuntime().exec("dumpsys batterystats --reset");
             Thread.sleep(1000);
         } catch (Exception e) {
-            Log.e("DeviceSettings", "SmartChargingService: " + e.toString());
+            Log.e("RealmeParts", "SmartChargingService: " + e.toString());
         }
     }
 

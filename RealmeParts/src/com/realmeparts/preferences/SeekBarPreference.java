@@ -261,7 +261,7 @@ public class SeekBarPreference extends Preference
             mSelected_Value.setText(mProgress + "%");
             SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
             sharedPrefs.edit().putInt("seek_bar", mProgress).commit();
-            Log.d("DeviceSettings", "Charging limit set at " + mProgress);
+            Log.d("RealmeParts", "Charging limit set at " + mProgress);
             //Toast.makeText(getContext(), "Charging stops at " + mProgress + "%" , Toast.LENGTH_SHORT).show();
         }
     }

@@ -308,11 +308,11 @@ public class Utils {
 
     public static void startService(Context context, Class<?> serviceClass ) {
         context.startServiceAsUser(new Intent(context, serviceClass), UserHandle.CURRENT);
-        Log.d("DeviceSettings", "Starting "+ serviceClass.getCanonicalName());
+        Log.d("RealmeParts", "Starting "+ serviceClass.getCanonicalName());
     }
 
     public static void stopService(Context context, Class<?> serviceClass ) {
         context.stopServiceAsUser(new Intent(context, serviceClass), UserHandle.CURRENT);
-        Log.d("DeviceSettings", "Stopping "+ serviceClass.getCanonicalName());
+        Log.d("RealmeParts", "Stopping "+ serviceClass.getCanonicalName());
     }
 }
