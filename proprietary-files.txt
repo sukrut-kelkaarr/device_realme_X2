@@ -57,6 +57,7 @@ system_ext/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
 system_ext/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
 system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8150.so
 system_ext/lib/rfsa/adsp/libtracker_6dof_skel_8250.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
@@ -90,6 +91,7 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio
+vendor/lib/liba2dpoffload.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
@@ -110,6 +112,7 @@ vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
+vendor/lib64/liba2dpoffload.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libaudio_log_utils.so
