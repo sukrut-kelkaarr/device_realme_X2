@@ -42,7 +42,8 @@
 
 /dev/block/by-name/metadata                             /metadata                ext4    noatime,nosuid,nodev,discard                         wait,formattable,wrappedkey
 /dev/block/bootdevice/by-name/cache                     /cache                   ext4    nosuid,noatime,nodev,barrier=1,async_discard                wait
-/dev/block/bootdevice/by-name/userdata                  /data                    ext4    noatime,nosuid,noatime,nodev,barrier=1,noauto_da_alloc,lazytime,errors=panic,inlinecrypt,async_discard     latemount,wait,resize,check,fileencryption=ice,quota,reservedsize=128M
+/dev/block/bootdevice/by-name/userdata                  /data                    ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc                 latemount,wait,check,fileencryption=ice,quota,reservedsize=128M
+/dev/block/bootdevice/by-name/userdata                  /data                    f2fs    noatime,nosuid,nodev,discard,fsync_mode=nobarrier              latemount,wait,check,fileencryption=ice,quota,formattable,reservedsize=128M
 
 /devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1         vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto
 /devices/platform/soc/1da4000.ufshc_card/host*          /storage/sdcard1         vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto
