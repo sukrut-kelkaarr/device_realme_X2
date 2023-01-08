@@ -99,10 +99,3 @@ prebuilt_etc {
     src: "etc/fstab.qcom",
     vendor: true,
 }
-
-prebuilt_etc {
-    name: "ueventd.qcom.rc",
-    filename: "ueventd.rc",
-    src: "ueventd.qcom.rc",
-    vendor: true,
-}
